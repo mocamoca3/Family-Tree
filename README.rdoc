@@ -7,19 +7,24 @@ http://protected-anchorage-5295.herokuapp.com/
 
 Project:
 Family Tree
+original idea:
+Kind of like social networking for your family. Can add people to the family tree, see a graphic representation, send messages to family members, add biography pages for specific people and historic or informational pages for important places or events. Can be currated by a single or multiple family members, who can then send requests to others to add in information. Ability to view the family from any person's point of view and determine the actual relationship between two people. Ability to add pictures of interesting things, like a gallery of family heirlooms or pictures of a family reunion. Can add documents, like recipes or things that family members have produced.
+This will most likely be severely simplified so that I can actually do it. 
 
 Problems encountered and solutions: 
 There was a problem with my Documents table, but I destroyed it and recreated it, and that solved the problem. 
-Problem using .name to interpret the user ids when showing documents. 
+Problem using .name to interpret the user ids when showing documents. Not resolved. 
+I want each user to know whether they have a partner. I also want them to know if they have children, and if so, to know the partner with whom they have children. So long as everyone knows their children, it should be possible to figure out the parents of each user, the siblings of each, and other family relationships. But I started this homework way too late to figure this out. 
+Page looks terrible, I didn't mess with the styling at all. 
 
 Schema:
 USER
 name: string
 email: string
 password: string
-child: user
-partner: user
 DOCUMENT
 title: string
 body: text
 user: belongs_to
+
+I also want for each user to have a boolean concerning children and users who are their children or partners. 
