@@ -1,10 +1,25 @@
 == README
 
+02/17/2014
+
 Heroku link: 
 http://protected-anchorage-5295.herokuapp.com/
 
 Project:
+Family Tree
 
 Problems encountered and solutions: 
+There was a problem with my Documents table, but I destroyed it and recreated it, and that solved the problem. 
+Problem using .name to interpret the user ids when showing documents. 
 
 Schema:
+USER
+name: string
+email: string
+password: string
+child: user
+partner: user
+DOCUMENT
+title: string
+body: text
+user: belongs_to

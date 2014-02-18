@@ -1,12 +1,12 @@
 class DocumentsController < ApplicationController
-  def index
+  def new
     @document = Document.new
   end
 
   def create
     @document = Document.new(document_params)
-    if @task_list.save
-      redirect_to posts_path
+    if @document.save
+      redirect_to documents_path
     else
       render 'new'
     end
@@ -16,7 +16,8 @@ class DocumentsController < ApplicationController
     params.require(:document).permit(:title, :body, :user_id)
   end
 
-  def new
+  def index
+    @documents = Document.all
   end
 
   def edit
